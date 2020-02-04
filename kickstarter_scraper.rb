@@ -4,7 +4,7 @@ require "nokogiri"
 require "pry"
 
 
-def create_project_hash
+# def create_project_hash
 
   # html = File.read('fixtures/kickstarter.html')
   # new_hash = {}
@@ -30,13 +30,15 @@ def create_project_hash
         :percent_funded => project.css("ul.project-stats li.first.funded strong").text.gsub("%","").to_i
       }
     end
+    projects
+
+    
   end
 
     # return the projects hash
-    projects
 
   # write your code here
 
-end
-
-create_project_hash
+# end
+#
+# create_project_hash
